@@ -1,10 +1,11 @@
+@(dataMap: java.util.HashMap[String, com.fasterxml.jackson.databind.node.ObjectNode])
 <!DOCTYPE html>
 
 <html>
     <head>
-        <title>index</title>        
+        <title>@dataMap.get("root").get("title").textValue()</title>        
     </head>
     <body>
-        @header()
+        @common.header(dataMap)
     </body>
 </html>

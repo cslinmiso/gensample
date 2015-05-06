@@ -1,0 +1,9 @@
+@(dataMap: java.util.HashMap[String, com.fasterxml.jackson.databind.node.ObjectNode])
+
+<h1> @dataMap.get("N1").get("N1.name").textValue() </h1>
+
+
+
+@for(a <- dataMap.get("N1").get("N1.arraySample").iterator()) {
+	<h5> @a.intValue() </h5>
+}
